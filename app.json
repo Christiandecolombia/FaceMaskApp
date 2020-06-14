@@ -1,0 +1,17 @@
+{
+  "name": "enterprise",
+  "displayName": "enterprise",
+  "expo": {
+    "name": "enterprise",
+    "slug": "enterprise",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
