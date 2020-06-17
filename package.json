@@ -8,7 +8,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.2.0",
     "expo": "~37.0.3",
+    "expo-camera": "^8.2.0",
+    "expo-face-detector": "^8.1.0",
+    "expo-image-picker": "^8.1.0",
+    "expo-permissions": "^8.1.0",
     "expo-updates": "~0.2.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
@@ -21,6 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@types/expo": "^26.0.2",
     "@types/react": "~16.9.23",
     "@types/react-native": "~0.61.23",
     "babel-preset-expo": "~8.1.0",

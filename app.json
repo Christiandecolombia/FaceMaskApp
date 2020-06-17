@@ -1,9 +1,9 @@
 {
-  "name": "enterprise",
-  "displayName": "enterprise",
+  "name": "FaceMaskApp",
+  "displayName": "FaceMaskApp",
   "expo": {
-    "name": "enterprise",
-    "slug": "enterprise",
+    "name": "FaceMaskApp",
+    "slug": "FaceMaskApp",
     "version": "1.0.0",
     "platforms": [
       "ios",
