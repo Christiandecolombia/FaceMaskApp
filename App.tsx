@@ -105,9 +105,21 @@ export default function App() {
           style={{
             fontSize: 45
           }}>Designs By Pispa</Text>
+
+        {/* Navagation buttons */}
+        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", margin: 30 }}>
+          <TouchableOpacity
+            style={{
+              alignSelf: 'flex-end',
+              alignItems: 'center',
+              backgroundColor: 'transparent'
+            }}
+            onPress={() => pickImage()}></TouchableOpacity></View>
+
         <Camera
           ref={cameraRef}
           style={styles.cameraView}
+          ratio={"1:1"}
           type={cameraType}
           faceDetectorSettings={{
             mode: FaceDetector.Constants.Mode.accurate,
@@ -131,7 +143,7 @@ export default function App() {
               width: width / 2,
               height: height / 2,
               margin: width / 4,
-              top: height / 9,
+              top: height,
             }}
             source={require("./asset/golden.png")}
           />
