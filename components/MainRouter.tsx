@@ -14,12 +14,18 @@ import FaceRecognition from "./FaceRecognition";
 // }
 
 
-const Stack = createStackNavigator();
+export type MainRouterProps = {
+    Landing: undefined;
+    FaceRecognition: undefined;
+}
 
-const MainRouter = () => {
+const Stack = createStackNavigator<MainRouterProps>();
+
+
+const MainRouter: React.FC = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="Landing">
                 <Stack.Screen name="Landing" component={Landing} />
                 <Stack.Screen name="FaceRecognition" component={FaceRecognition} />
             </Stack.Navigator>

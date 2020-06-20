@@ -1,33 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import { Button, View, Text } from "react-native";
-import FaceRecognition from "./FaceRecognition";
-import MainRouter from "./MainRouter";
+import { MainRouterProps } from "./MainRouter";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { StackNavigationProp } from '@react-navigation/stack';
 
- 
-const CameraPage = () => {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Details Screen</Text>
-        </View>
+type LandingNavProps = StackNavigationProp<MainRouterProps, "Landing">;
 
-    );
+type Props = {
+    navigation: LandingNavProps;
 }
-const Landing = ( navigation: any  ) => {
+
+const Landing: React.FC<Props> = ({ navigation }) => {
     return (
         <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
 
             <Text> Designs </Text>
-            
-            <Button 
-            title = "Camera"
-            onPress={() => navigation.navigation ('FaceRecognition') } 
+
+            <Button
+                title="Camera"
+                onPress={() => navigation.navigate('FaceRecognition')}
             />
-        
+
 
 
 
