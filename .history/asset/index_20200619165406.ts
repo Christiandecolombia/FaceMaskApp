@@ -1,0 +1,1 @@
+export const GoldenPng = require("./golden.png");
