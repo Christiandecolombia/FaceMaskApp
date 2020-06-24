@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, View, Text } from "react-native";
-import { MainRouterProps } from "./MainRouter";
 
+import SizingPage from "./SizingPage"
+
+import { MainRouterProps } from "./MainRouter";
 import { StackNavigationProp } from '@react-navigation/stack';
 
 type LandingNavProps = StackNavigationProp<MainRouterProps, "Landing">;
@@ -19,8 +21,8 @@ const Landing: React.FC<Props> = ({ navigation }) => {
             <Text> Designs </Text>
 
             <Button
-                title="Camera"
-                onPress={() => navigation.navigate('FaceRecognition')}
+                title="Go to sizing page"
+                onPress={() => navigation.navigate('SizingPage')}
             />
 
 
