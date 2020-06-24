@@ -2,7 +2,8 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Landing from "./Landing";
-import FaceRecognition from "./FaceRecognition";
+import SizingPage from "./SizingPage"
+import FaceRecognition from "./camera/FaceRecognition";
 
 
 // const FaceRecognition() {
@@ -17,6 +18,7 @@ import FaceRecognition from "./FaceRecognition";
 export type MainRouterProps = {
     Landing: undefined;
     FaceRecognition: undefined;
+    SizingPage: undefined;
 }
 
 const Stack = createStackNavigator<MainRouterProps>();
@@ -28,6 +30,7 @@ const MainRouter: React.FC = () => {
             <Stack.Navigator initialRouteName="Landing">
                 <Stack.Screen name="Landing" component={Landing} />
                 <Stack.Screen name="FaceRecognition" component={FaceRecognition} />
+                <Stack.Screen name="SizingPage" component={SizingPage} />
             </Stack.Navigator>
         </NavigationContainer>
     );
