@@ -53,7 +53,11 @@ const SizingPage: React.FC<Props> = ({ navigation }) => {
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
 
-            <Text> Designs </Text>
+            <Text> Chose a size that best matches your face.  </Text>
+            <Button
+                title="Small"
+                onPress={() =>  }
+            />
 
             <Button
                 title="Open Camera"
