@@ -2,9 +2,8 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Landing from "./Landing";
-import SizingPage from "./SizingPage"
+import SizingPage from "./SizingPage";
 import FaceRecognition from "./camera/FaceRecognition";
-
 
 // const FaceRecognition() {
 //     return (
@@ -14,24 +13,39 @@ import FaceRecognition from "./camera/FaceRecognition";
 //     )
 // }
 
-
 export type MainRouterProps = {
     Landing: undefined;
-    FaceRecognition: undefined;
+    Camera: undefined;
+};
+
+export type CameraRouterProps = {
     SizingPage: undefined;
 }
 
 const Stack = createStackNavigator<MainRouterProps>();
+const CamStack = createStackNavigator();
 
+const CameraNavigator: React.FC = () => {
+    return (
+        <CamStack.Navigator>
+            <CamStack.Screen name="SizingPage" component={SizingPage} />
+        </CamStack.Navigator>
+    );
+};
+
+const MainNavigator: React.FC = () => {
+    return (
+        <Stack.Navigator initialRouteName="Landing">
+            <Stack.Screen name="Landing" component={Landing} />
+            <Stack.Screen name="Camera" component={CameraNavigator} />
+        </Stack.Navigator>
+    );
+};
 
 const MainRouter: React.FC = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Landing">
-                <Stack.Screen name="Landing" component={Landing} />
-                <Stack.Screen name="FaceRecognition" component={FaceRecognition} />
-                <Stack.Screen name="SizingPage" component={SizingPage} />
-            </Stack.Navigator>
+            <MainNavigator />
         </NavigationContainer>
     );
 };
